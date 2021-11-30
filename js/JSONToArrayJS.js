@@ -1,7 +1,7 @@
-let JSONServer = '{"name": "Juliana", "age": 28, "email": "julianachaves09@outlook.com"}';
+let JSONString = '{name: "Juliana", email: "julianachaves09@outlook.com"}';
 
 function objJavaScript(){
-    let obj = JSON.parse(JSONServer);
+    let obj = JSON.parse(JSONString);
     return obj;
 }
 
@@ -10,15 +10,35 @@ function createTable(){
     let table = document.querySelector('table');
     let obj = objJavaScript();
 
-    let thead = createThead(obj);
-    let tbody = createTbody(obj);
+    let thead = createThead(createArrayHeadAttribute(obj));
+    let tbody = createTbody(createArrayHeadValue(obj));
     let tfoot = createTfoot();
 
-    table.className = "table table-striped table-bordered table-hover"
+    table.className = "table table-striped table-bordered table-hover";
     table.appendChild(thead);
     table.appendChild(tbody);
     table.appendChild(tfoot);
 
+}
+
+function createArrayHeadAttribute(obj){
+
+    let arrayJSHead = null;
+
+    for (let i in obj){
+       arrayJSHead.push(i); 
+    }
+    return arrayJSHead;
+}
+
+function createArrayHeadValue(obj){
+
+    let arrayJSHead = null;
+
+    for (let i in obj){
+        arrayJSHead.push(obj[i]);
+    }
+    return arrayJSHead;
 }
 
 function createThead(obj){
@@ -46,7 +66,7 @@ function createTbody(obj){
     for (let i in obj){
         
         let td = document.createElement('td');
-        td.innerHTML = obj[i];
+        td.innerHTML = i;
         tr.appendChild(td);
     }
 

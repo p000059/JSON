@@ -1,9 +1,12 @@
-let JSONServer = '{"name": "Juliana", "age": 28, "email": "julianachaves09@outlook.com"}';
+let JSONServer = '[{"name": "Juliana", "email": "julianachaves09@outlook.com"},{"name":"Marcelo", "email": "marcelo.acad@gmail.com"}, {"name": "Marcos", "email": "marcos.pontes@gmail.com"}]';
 
 function objJavaScript(){
+    
     let obj = JSON.parse(JSONServer);
     return obj;
 }
+
+
 
 function createTable(){
 
@@ -14,43 +17,56 @@ function createTable(){
     let tbody = createTbody(obj);
     let tfoot = createTfoot();
 
-    table.className = "table table-striped table-bordered table-hover"
+    table.className = "table table-striped table-bordered table-hover";
     table.appendChild(thead);
     table.appendChild(tbody);
     table.appendChild(tfoot);
-
 }
 
 function createThead(obj){
 
     let thead = document.createElement('thead');
-    let tr = document.createElement('tr');
     
-    for (let i in obj){
+    obj.forEach(increment);
+
+    function increment(element){
+
+        let tr = document.createElement('tr');
         
-        let th = document.createElement('th');
-        th.innerHTML = i.toUpperCase();
-        tr.appendChild(th);
+        for (let i in element){
+                
+            let th = document.createElement('th');
+            th.innerHTML = i.toUpperCase();
+            tr.appendChild(th);
+        }
+
+        thead.className = "table-dark";
+        thead.appendChild(tr);
+        return thead;
     }
 
-    thead.className = "table-dark";
-    thead.appendChild(tr);
     return thead;
 }
 
 function createTbody(obj){
     
     let tbody = document.createElement('tbody');
-    let tr = document.createElement('tr');
     
-    for (let i in obj){
+    obj.forEach(increment); 
+    
+    function increment(element){
         
-        let td = document.createElement('td');
-        td.innerHTML = obj[i];
-        tr.appendChild(td);
-    }
+        let tr = document.createElement('tr');
+        
+        for(let i in element){
+            
+            let td = document.createElement('td');
+            td.innerHTML = element[i];
+            tr.appendChild(td);
+        }
 
-    tbody.appendChild(tr);
+        tbody.appendChild(tr);     
+    }
     return tbody;
 }
 

@@ -1,0 +1,30 @@
+[
+    {
+        "id":40,
+        "co_person":0,
+        "nm_person":"Niels Bohr",
+        "nm_fantasy":"",
+        "ds_person":"",
+        "dt_birth_create":"18851007",
+        "dt_death_closing":"19621118",
+        "id_type_person":1,
+        "id_gender":1,
+        "id_nationality":13,
+        "st_person":"1"
+    },
+
+    {
+        "id":41,
+        "co_person":0,
+        "nm_person":"Michael Faraday",
+        "nm_fantasy":"",
+        "ds_person":"",
+        "dt_birth_create":"17910922",
+        "dt_death_closing":"18670825",
+        "id_type_person":1,
+        "id_gender":1,
+        "id_nationality":7,
+        "st_person":"1"
+    }
+]
+

@@ -37,5 +37,6 @@
     {"name":"Gottfried Wilhelm Leibniz","activity":"Polymath","birth":"01061646","death":"14111716","nationality":"German"},
     {"name":"Blaise Pascal","activity":"Mathematician","birth":"19061623","death":"19081662","nationality":"French"},
     {"name":"Antoine Lavoisier","activity":"Chemist","birth":"26081743","death":"08051794","nationality":"French"},
-    {"name":"Carl Friedrich Gauss","activity":"Polymath","birth":"03041777","death":"23021855","nationality":"German"}
+    {"name":"Carl Friedrich Gauss","activity":"Polymath","birth":"03041777","death":"23021855","nationality":"German"},
+    {"name":"Niels Bohr","activity":"Physicist","birth":"18851007","death":"19621118","nationality":"Denmark" }
 ]
